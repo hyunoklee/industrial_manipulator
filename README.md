@@ -1,5 +1,5 @@
 # image shot
-<img src="1.png" width="70%" height="70%">  
+<img src="/picture/1.png" width="70%" height="70%">  
 
 # youtube video
 Click image to link to YouTube video.  
