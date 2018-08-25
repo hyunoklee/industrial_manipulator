@@ -1,0 +1,320 @@
+<robot
+  name="4axis_robotarm2_MG946R3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.146435343052193 -0.0111243328305555 -0.0164324193189885"
+        rpy="0 0 0" />
+      <mass
+        value="0.0837407999999999" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.000220975776020704 0.0178872146367407 -0.00135226120609987"
+        rpy="0 0 0" />
+      <mass
+        value="0.0397205395724487" />
+      <inertia
+        ixx="7.28733430589835E-07"
+        ixy="-1.371774858781E-08"
+        ixz="-1.18691712579933E-08"
+        iyy="3.12442857902255E-07"
+        iyz="-3.60582751582229E-07"
+        izz="4.17193656967394E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="0.14515 0.005388 0.005"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.0304942605248669 -0.00211222719239453 -0.00029795494698856"
+        rpy="0 0 0" />
+      <mass
+        value="0.0875837074630188" />
+      <inertia
+        ixx="2.62761877579252E-05"
+        ixy="-1.38625518151057E-06"
+        ixz="5.91944601981938E-09"
+        iyy="2.75091078177567E-05"
+        iyz="-8.70560909995455E-10"
+        izz="3.51405044996351E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.01045 0.04155 0"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.000308412952038928 0.00306656177086843 0.100929586087733"
+        rpy="0 0 0" />
+      <mass
+        value="0.133037822239407" />
+      <inertia
+        ixx="0.000217208553604829"
+        ixy="-5.69421455489284E-07"
+        ixz="-4.10888132927957E-06"
+        iyy="0.000218118125006019"
+        iyz="-2.25391471338909E-05"
+        izz="6.78882531388457E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.0436 0 0"
+      rpy="0.018397 -1.5708 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.000286705859385089 0.0935895421704246 -0.00664963010273187"
+        rpy="0 0 0" />
+      <mass
+        value="0.131997433641328" />
+      <inertia
+        ixx="0.000110357001391995"
+        ixy="-3.2206569110594E-06"
+        ixz="1.63374377974659E-06"
+        iyy="1.49604416964101E-05"
+        iyz="2.82586110984599E-05"
+        izz="9.75747966452772E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 0.0205 0.1575"
+      rpy="3.4694E-18 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.00272520452673561 0.0412787000733883 -0.0103233278066457"
+        rpy="0 0 0" />
+      <mass
+        value="0.0478540336413288" />
+      <inertia
+        ixx="8.45353430653419E-06"
+        ixy="-6.98793501895458E-07"
+        ixz="-2.11160784967425E-07"
+        iyy="2.34587871686048E-06"
+        iyz="2.67757137743739E-06"
+        izz="7.87735416815943E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4axis_robotarm2_MG946R3/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0.136 -0.02345"
+      rpy="-2.618 0 3.1416" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

@@ -1,11 +1,15 @@
-# image shot
-<img src="/picture/1.jpg" width="70%" height="70%">  
+# ver2 youtube video  
+Click image to link to YouTube video.  
+[![Video Label](http://img.youtube.com/vi/KuE-_DLDpcY/0.jpg)](https://youtu.be/KuE-_DLDpcY?t=0s)   
 
-# youtube video
+# ver1 youtube video  
 Click image to link to YouTube video.  
 [![Video Label](http://img.youtube.com/vi/gjvN7VKTSh8/0.jpg)](https://youtu.be/gjvN7VKTSh8?t=0s)   
 
-# Run
+# ver1 image shot  
+<img src="/picture/1.jpg" width="70%" height="70%">  
+
+# Run  
 * First install open manipulator  
 http://emanual.robotis.com/docs/en/platform/openmanipulator/   
 * Second replace meshes and urdf folders of 'ros_data folder' to 'open_manipulator_description'  
